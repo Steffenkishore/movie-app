@@ -1,8 +1,7 @@
 // const BASE_URL = "http://localhost:5000/api/movies";
-const BASE_URL = "https://movie-app-eq92.onrender.com/api/movies";
 
 export const getPopularMovies = async () => {
-  const res = await fetch(`${BASE_URL}/popular`);
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/popular`);
   return await res.json();
 };
 
