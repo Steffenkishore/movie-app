@@ -5,7 +5,7 @@ export const getPopularMovies = async () => {
 
 export const searchMovies = async (query) => {
   const res = await fetch(
-    `${BASE_URL}/search?query=${encodeURIComponent(query)}`
+    `${import.meta.env.VITE_API_URL}/search?query=${encodeURIComponent(query)}`
   );
   return await res.json();
 };
