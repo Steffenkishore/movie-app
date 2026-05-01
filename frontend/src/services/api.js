@@ -1,5 +1,9 @@
 export const getPopularMovies = async () => {
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/popular`);
+  const res = await fetch(
+    `${import.meta.env.VITE_API_URL}/popular`,{
+      method: "GET",
+    }
+  );
   return await res.json();
 };
 

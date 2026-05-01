@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 
-/* Get popular movies */
+
 app.get("/api/movies/popular", async (req, res) => {
   try {
     const response = await fetch(
@@ -20,7 +20,7 @@ app.get("/api/movies/popular", async (req, res) => {
   }
 });
 
-/* Search movies */
+
 app.get("/api/movies/search", async (req, res) => {
   try {
     const { query } = req.query;
